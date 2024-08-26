@@ -368,6 +368,7 @@ Error generating stack: `+s.message+`
   height: 100vh;
   position: fixed;
   top: 0;
+  z-index: 999;
   left: 0;
   position: "relative";
 `;function UD(){return P.jsx($D,{})}Au.createRoot(document.getElementById("root")).render(P.jsx(xn.StrictMode,{children:P.jsx(UD,{})}));

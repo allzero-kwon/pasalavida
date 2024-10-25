@@ -6,10 +6,10 @@ Pasalavida project
 https://allzero-kwon.github.io/pasalavida/
 
 ### 신랑 혼주 청첩장 
-https://allzero-kwon.github.io/pasalavida/?t=h1
+https://allzero-kwon.github.io/pasalavida/?t=h1&v=skip
 
 ### 신부 혼주 청첩장
-https://allzero-kwon.github.io/pasalavida/?t=h2
+https://allzero-kwon.github.io/pasalavida/?t=h2&v=skip
 
 
 --- 

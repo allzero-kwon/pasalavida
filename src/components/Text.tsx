@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const IntroTitle = styled.p`
-  font-family: Birds-of-paradise, serif;
+  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
   font-size: 3rem;
   color: #000;
   margin: 20px;
@@ -13,7 +13,7 @@ export const IntroTitle = styled.p`
 `;
 
 export const Heading1 = styled.p`
-  font-family: SunBatang-Light, serif;
+  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
   font-size: 1.5rem;
   margin: 10px;
   color: #f78828;
@@ -27,7 +27,7 @@ export const Heading2 = styled.p`
 `;
 
 export const PointTitle = styled.p`
-  font-family: SunBatang-Light, serif;
+  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
   line-height: 1;
   margin: 0;
   color: #f78828;

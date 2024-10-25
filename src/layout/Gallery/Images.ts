@@ -23,31 +23,31 @@ const images = [   /* 이미지 경로를 리스트로 저장 */
   {
     alt: 'image03',
     source: image03,
-  },{
+  }, {
     alt: 'image04',
     source: image04,
-  },{
+  }, {
     alt: 'image05',
     source: image05,
-  },{
+  }, {
     alt: 'image06',
     source: image06,
-  },{
+  }, {
     alt: 'image07',
     source: image07,
-  },{
+  }, {
     alt: 'image08',
     source: image08,
-  },{
+  }, {
     alt: 'image09',
     source: image09,
-  },{
+  }, {
     alt: 'image10',
     source: image10,
-  },{
+  }, {
     alt: 'image11',
     source: image11,
-  },{
+  }, {
     alt: 'image12',
     source: image12,
   }

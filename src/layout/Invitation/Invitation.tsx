@@ -1,23 +1,28 @@
 import styled from "@emotion/styled";
 import data from "data.json";
 import Host from "../Contact/Host.tsx";
-// import RoundButton from '@/components/RoundButton.tsx';
-import { Caption, Paragraph } from "@/components/Text.tsx";
+// import RoundButton from "@/components/RoundButton.tsx";
+import { Paragraph } from "@/components/Text.tsx";
+import * as qs from "qs";
 
 const Invitation = () => {
   const { greeting } = data;
+  const query = qs.parse(location.search, {
+    ignoreQueryPrefix: true,
+    // 문자열 맨 앞의 ?를 생력
+  });
+  const pageType = query.t;
+
   return (
     <InvitationWrapper>
-      <Paragraph>{greeting.message}</Paragraph>
+      <Paragraph>
+        {pageType === "h1"
+          ? greeting.message_h
+          : pageType === "h2"
+          ? greeting.message_y
+          : greeting.message}
+      </Paragraph>
       <Host />
-      <Caption textAlign={"center"}>{greeting.eventDetail}</Caption>
-      {/* TODO: 구글캘린더 추가하기 기능을 넣는다면 링크 수정 */}
-      {/* <RoundButton
-        target="_blank"
-        href=""
-        rel="noreferrer">
-        인터뷰보기
-      </RoundButton> */}
     </InvitationWrapper>
   );
 };

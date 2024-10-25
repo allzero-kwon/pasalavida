@@ -38,23 +38,23 @@ const Main = () => {
             <g className="parallax">
               <use
                 xlinkHref="#gentle-wave"
-                x="48"
+                x="58"
                 y="0"
                 fill="rgba(255,255,255,0.7"
               />
               <use
                 xlinkHref="#gentle-wave"
-                x="48"
+                x="58"
                 y="3"
                 fill="rgba(255,255,255,0.5)"
               />
               <use
                 xlinkHref="#gentle-wave"
-                x="48"
+                x="58"
                 y="5"
                 fill="rgba(255,255,255,0.3)"
               />
-              <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />
+              <use xlinkHref="#gentle-wave" x="58" y="7" fill="#fff" />
             </g>
           </svg>
         </div>
@@ -88,17 +88,17 @@ const MainImg = styled.img`
 // `;
 
 const MainTitle = styled.p`
-  font-family: SunBatang-Light, serif;
+  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
   font-size: 1.5rem;
-  color: #2f2120;
+  color: black;
   line-height: 120%;
   white-space: pre-line;
 `;
 
 const SubTitle = styled.p`
-  font-family: SunBatang-Light, serif;
+  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
   font-size: 1.1rem;
-  color: #2f2120;
+  color: black;
   line-height: 140%;
   white-space: pre-line;
 `;

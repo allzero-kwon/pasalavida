@@ -1,10 +1,8 @@
-import { useRoutes } from "react-router-dom";
 import "./App.css";
-import { routes } from "routes";
+import IndexPage from "./index";
 
 function App() {
-  const element = useRoutes(routes);
-  return element;
+  return <IndexPage></IndexPage>;
 }
 
 export default App;

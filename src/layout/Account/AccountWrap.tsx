@@ -22,10 +22,10 @@ const AccountWrap = ({
   const handleCopy = () => {
     navigator.clipboard.writeText(account).then(
       () => {
-        alert("계좌번호가 복사되었습니다.😉😉");
+        alert("계좌번호가 복사되었습니다.");
       },
       () => {
-        alert("계좌번호 복사에 실패했습니다.🥲🥲");
+        alert("계좌번호 복사에 실패했습니다.");
       }
     );
   };
@@ -65,7 +65,7 @@ const AccountWrap = ({
 };
 
 const Wrapper = styled.div`
-  font-family: "SUITE-Regular";
+  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
   padding: 10px 0;
   border-bottom: 1px solid #dfdfdf;
   &:last-of-type {
@@ -81,6 +81,7 @@ const Info = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
+  color: #000;
   margin: 5px 0;
 `;
 const Relation = styled.span`

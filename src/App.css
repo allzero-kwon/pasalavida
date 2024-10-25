@@ -1,8 +1,15 @@
+@font-face {
+  font-family: "MapoFlowerIsland";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 #root {
   margin: 0 auto;
   text-align: center;
+  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo";
 }
-
 .logo {
   height: 6em;
   padding: 1.5em;

@@ -61,7 +61,7 @@ Error generating stack: `+o.message+`
   font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
   line-height: 1;
   margin: 0;
-  color: #f78828;
+  color: #000;
   white-space: pre-line;
 `,Rk=H.p`
   line-height: 2.2rem;

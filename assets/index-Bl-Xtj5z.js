@@ -97,7 +97,8 @@ Error generating stack: `+o.message+`
 더없는 기쁨으로 간직하겠습니다.
 `,message:`평생을 같이하고 싶은 사람을 만났습니다.
 서로를 아껴주고 사랑하며 재미있게 살겠습니다.
-저희 두 사람의 첫걸음이 시작되는 자리에 오셔서 축복해주시면 더 없는 기쁨으로 간직하겠습니다. 
+저희 두 사람의 첫걸음이 시작되는 자리에 오셔서
+축복해주시면 더 없는 기쁨으로 간직하겠습니다. 
 `,host:{groom:{name:"원재",relation:"장남",parents:[{relation:"아버지",name:"박노정"},{relation:"어머니",name:"윤순옥"}]},bride:{name:"희송",relation:"장녀",parents:[{relation:"아버지",name:"신성문"},{relation:"어머니",name:"정미정"}]}},eventDetail:`2025년 2월 8일 14시 30분
 M스타하우스 1층 블루스타홀`},Fk=[{host:"신랑측",accountInfo:[{name:"박노정",relation:"신랑 아버지",bank:"농협",account:"100050-56-012279",kakaopayAccount:"",tossAccount:""},{name:"윤순옥",relation:"신랑 어머니",bank:"농협",account:"352-0067-9756-43",kakaopayAccount:"",tossAccount:""},{name:"박원재",relation:"신랑",bank:"국민",account:"919301-01-135460",kakaopayAccount:"",tossAccount:""}]},{host:"신부측",accountInfo:[{name:"신성문",relation:"신부 아버지",bank:"대구은행",account:"156-07-045882-003",kakaopayAccount:"",tossAccount:""},{name:"정미정",relation:"신부 어머니",bank:"대구은행",account:"052-08-219165",kakaopayAccount:"",tossAccount:""},{name:"신희송",relation:"신부",bank:"대구은행",account:"508-11-699369-0",kakaopayAccount:"",tossAccount:""}]}],Nk={address1:"M스타하우스 1층 블루스타홀",address2:"대구광역시 동구 동촌로 316(방촌동)",naverMap:"https://map.naver.com/p/entry/place/19550872?lng=128.6738573&lat=35.8778522&placePath=%2F&entry=pll&searchType=place&c=15.00,0,0,0,dh"},zk=[{title:"📍 지하철",desc:`👉🏻 방촌역(1호선)에서 하차 후 3번 출구(도보 5분거리)
 👉🏻 동대구역에서 1호선 안심행 열차 승차 후 방촌역에서 하차`},{title:"📍 버스",desc:"👉🏻 방촌치안센터 618, 719, 805, 808, 818, 836, 980, 동구1, 동구2"},{title:"📍 주차안내",desc:"👉🏻 경부고속도로 동대구IC에서 5분거리 | 자체주차장(총 1000대 수용가능)"},{title:"📍 대절 버스 탑승 장소 및 시간",desc:`👉🏻 경기도 파주시 법원읍 하나로마트 천현농협본점 앞에서 8시30분 출발 

@@ -6,15 +6,19 @@ Pasalavida project
 https://allzero-kwon.github.io/pasalavida/
 
 ### 신랑 혼주 청첩장 
-https://allzero-kwon.github.io/pasalavida/?t=h1
+https://allzero-kwon.github.io/pasalavida/?t=h1&v=skip
 
 ### 신부 혼주 청첩장
-https://allzero-kwon.github.io/pasalavida/?t=h2
+https://allzero-kwon.github.io/pasalavida/?t=h2&v=skip
 
 
 --- 
 
-## 2. 프로젝트 셋업 & 배포 
+## 2. 프로젝트 셋업 & 배포
+- 프로젝트 클론
+
+https://github.com/allzero-kwon/pasalavida.git
+
 - node 설치
 https://velog.io/@ljs923/Node.js-다운로드-및-설치하기
 

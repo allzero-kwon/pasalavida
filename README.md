@@ -85,8 +85,8 @@ dist/index.html 내의 아래 정보들 변경
 
 ```
     <title>동현와 다영, 결혼합니다</title>
-    <meta name="description" content="2024년 9월 29일 (일) 14:00 선릉 르비르모어 클리타홀">
-    <meta name="description" property="og:description" content="2024년 9월 29일 (일) 14:00 선릉 르비르모어 클리타홀">
+    <meta name="description" content="2025년 4월 19일 18시 30분\nM스타하우스 1층 블루스타홀">
+    <meta name="description" property="og:description" content="2025년 4월 19일 18시 30분\nM스타하우스 1층 블루스타홀">
 ```
 
 

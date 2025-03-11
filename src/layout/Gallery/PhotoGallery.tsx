@@ -1,8 +1,42 @@
 import { Gallery, Item } from "react-photoswipe-gallery";
 import "photoswipe/style.css";
+import React, { useState, useEffect } from "react";
 import images from "@/layout/Gallery/Images.ts";
 
+interface ImageSize {
+  alt: string;
+  source: string;
+  width: number;
+  height: number;
+}
+
 const PhotoGallery = () => {
+  const [imageSizes, setImageSizes] = useState<ImageSize[]>([]);
+
+  useEffect(() => {
+    const loadImageSizes = async () => {
+      const sizes = await Promise.all(
+        images.map((image) => {
+          return new Promise<ImageSize>((resolve) => {
+            const img = new Image();
+            img.src = image.source;
+            img.onload = () => {
+              resolve({
+                alt: image.alt,
+                source: image.source,
+                width: img.naturalWidth, // 원본 너비
+                height: img.naturalHeight, // 원본 높이
+              });
+            };
+          });
+        })
+      );
+      setImageSizes(sizes); // 상태 업데이트
+    };
+
+    loadImageSizes();
+  }, []);
+
   const smallItemStyles: React.CSSProperties = {
     cursor: "pointer",
     objectFit: "cover",
@@ -19,15 +53,15 @@ const PhotoGallery = () => {
           gridGap: 2,
         }}
       >
-        {images.map((image, index) => {
+        {imageSizes.map((image, index) => {
           return (
             <Item
               key={index}
               cropped
               original={image.source}
               thumbnail={image.source}
-              width="1280"
-              height="1920"
+              width={image.width} // 동적으로 계산된 원본 크기
+              height={image.height} // 동적으로 계산된 원본 크기
             >
               {({ ref, open }) => (
                 <img

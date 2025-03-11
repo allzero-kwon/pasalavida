@@ -6,7 +6,7 @@ import {
 } from "react-naver-maps";
 
 const Map = () => {
-  const { lat, lon } = { lat: 127.0497041, lon: 37.5044068 };
+  const { lat, lon } = { lat: 128.6738573, lon: 35.8778522 };
   const navermaps = useNavermaps();
 
   return (

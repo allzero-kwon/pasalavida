@@ -30,7 +30,7 @@ export const PointTitle = styled.p`
   font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
   line-height: 1;
   margin: 0;
-  color: #f78828;
+  color: #000;
   white-space: pre-line;
 `;
 
@@ -43,4 +43,5 @@ export const Caption = styled.p<{ textAlign?: string }>`
   font-weight: 200;
   text-align: ${(props) => (props.textAlign ? props.textAlign : "start")};
   white-space: pre-line;
+  font-size: 14px;
 `;

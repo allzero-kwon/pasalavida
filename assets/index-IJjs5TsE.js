@@ -355,7 +355,7 @@ M스타하우스 1층 블루스타홀`},mapInfo:{address1:"상록아트홀 5층 
   display: flex;
   gap: 8px;
   justify-content: center;
-`,kb=({address:e})=>{const t=q3(),[n,r]=T.useState({lat:0,lng:0});return T.useEffect(()=>{e&&naver.maps.Service.geocode({query:e},(i,s)=>{if(i===naver.maps.Service.Status.OK){const o=s.v2.addresses[0];o&&r({lat:parseFloat(o.y),lng:parseFloat(o.x)})}else console.error("Geocoding failed:",i)})},[e]),E.jsx(j_,{style:{width:"100%",height:"300px"},children:E.jsx(fw,{center:new t.LatLng(n.lat,n.lng),defaultZoom:18,draggable:!1,pinchZoom:!1,scrollWheel:!1,keyboardShortcuts:!1,children:E.jsx(y_,{position:new t.LatLng(n.lat,n.lng)})})})},ep=({mapInfo:e})=>E.jsxs(Ab,{children:[E.jsx(s7,{children:e.address1}),E.jsx(o7,{textAlign:"center",children:e.address2}),E.jsx(kb,{address:e.address2}),E.jsx(bb,{naverMap:e.naverMap}),E.jsx(xb,{location:e.location})]}),Ab=Q.div`
+`,kb=({address:e})=>{const t=q3(),[n,r]=T.useState({lat:0,lng:0});return T.useEffect(()=>{e&&naver.maps.Service.geocode({query:e},(i,s)=>{if(i===naver.maps.Service.Status.OK){const o=s.v2.addresses[0];o&&r({lat:parseFloat(o.y),lng:parseFloat(o.x)})}else console.error("Geocoding failed:",i)})},[e]),E.jsx(j_,{style:{width:"100%",height:"300px"},children:E.jsx(fw,{center:new t.LatLng(n.lat,n.lng),defaultZoom:16,draggable:!0,pinchZoom:!0,scrollWheel:!1,keyboardShortcuts:!1,children:E.jsx(y_,{position:new t.LatLng(n.lat,n.lng)})})})},ep=({mapInfo:e})=>E.jsxs(Ab,{children:[E.jsx(s7,{children:e.address1}),E.jsx(o7,{textAlign:"center",children:e.address2}),E.jsx(kb,{address:e.address2}),E.jsx(bb,{naverMap:e.naverMap}),E.jsx(xb,{location:e.location})]}),Ab=Q.div`
   width: 90%;
   display: flex;
   flex-direction: column;

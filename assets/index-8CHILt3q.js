@@ -100,6 +100,7 @@ Error generating stack: `+s.message+`
   text-align: ${e=>e.textAlign?e.textAlign:"start"};
   white-space: pre-line;
   font-size: 14px;
+  margin-bottom: 10px;
 `,V3=Q.section`
   /* padding: 30px 30px; */
   display: flex;

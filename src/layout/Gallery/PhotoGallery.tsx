@@ -1,7 +1,7 @@
 import { Gallery, Item } from "react-photoswipe-gallery";
 import "photoswipe/style.css";
 import React, { useState, useEffect } from "react";
-import images from "@/layout/Gallery/Images.ts";
+import {getImagesById} from "@/layout/Gallery/Images.ts";
 
 interface ImageSize {
   alt: string;
@@ -10,8 +10,9 @@ interface ImageSize {
   height: number;
 }
 
-const PhotoGallery = () => {
+const PhotoGallery = ({ id }: { id: string }) => {
   const [imageSizes, setImageSizes] = useState<ImageSize[]>([]);
+  const images = getImagesById(id);
 
   useEffect(() => {
     const loadImageSizes = async () => {
@@ -31,6 +32,7 @@ const PhotoGallery = () => {
           });
         })
       );
+      console.log('image ', sizes)
       setImageSizes(sizes); // 상태 업데이트
     };
 
@@ -40,8 +42,10 @@ const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
     cursor: "pointer",
     objectFit: "cover",
-    width: "100px",
-    height: "150px",
+    width: "130px",
+    height: "130px",
+    borderRadius: "5px",
+    maxWidth: "fit-content"
   };
 
   return (

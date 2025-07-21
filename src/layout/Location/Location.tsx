@@ -1,19 +1,24 @@
 import styled from "@emotion/styled";
-import data from "data.json";
 import Address from "./Address.tsx";
-import Map from "./Map.tsx";
+// import Map from "./Map.tsx";
 import MapButtons from "./MapButtons.tsx";
 import { Caption, PointTitle } from "@/components/Text.tsx";
+import { IMapInfo } from "@/types/data.ts";
+import Maps from "../Maps/Maps.tsx";
 
-const Location = () => {
-  const { mapInfo } = data;
+
+interface LocationProps {
+  mapInfo: IMapInfo;
+}
+
+const Location = ({mapInfo}: LocationProps) => {
   return (
     <LocationWrapper>
       <PointTitle>{mapInfo.address1}</PointTitle>
       <Caption textAlign={"center"}>{mapInfo.address2}</Caption>
-      <Map />
-      <MapButtons />
-      <Address />
+      <Maps address={mapInfo.address2} />
+      <MapButtons naverMap={mapInfo.naverMap}/>
+      <Address location={mapInfo.location} />
     </LocationWrapper>
   );
 };

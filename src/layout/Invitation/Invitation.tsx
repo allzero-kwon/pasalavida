@@ -1,28 +1,18 @@
 import styled from "@emotion/styled";
-import data from "data.json";
 import Host from "../Contact/Host.tsx";
-// import RoundButton from "@/components/RoundButton.tsx";
 import { Paragraph } from "@/components/Text.tsx";
-import * as qs from "qs";
+import { IMain } from "@/types/data.ts"
 
-const Invitation = () => {
-  const { greeting } = data;
-  const query = qs.parse(location.search, {
-    ignoreQueryPrefix: true,
-    // 문자열 맨 앞의 ?를 생력
-  });
-  const pageType = query.t;
+
+const Invitation = (props: IMain) => {
+  const { message, host } = props;
 
   return (
     <InvitationWrapper>
       <Paragraph>
-        {pageType === "h1"
-          ? greeting.message_h
-          : pageType === "h2"
-          ? greeting.message_y
-          : greeting.message}
+        {message}
       </Paragraph>
-      <Host />
+      <Host groom={host.groom} bride={host.bride}/>
     </InvitationWrapper>
   );
 };

@@ -1,13 +1,17 @@
 import styled from "@emotion/styled";
-import data from "data.json";
-// import MyVideo from '@/assets/videos/myvideo.mp4';
-import MyImage from "@/assets/images/00.png";
 import "./Main.css";
+import { IMain } from "@/types/data";
+import { getMainImageById } from "../Gallery/Images";
 
-const Main = () => {
-  const { greeting } = data;
-  // const videoRef = useRef();
-  // const isVideo: boolean = false;
+interface MainProp{
+  font: string;
+  id: string;
+  props : IMain
+}
+
+const Main = ({font, id, props}: MainProp) => {
+  const { title, eventDetail } = props;
+  const myImage = getMainImageById(id);
 
   return (
     <div>
@@ -18,7 +22,7 @@ const Main = () => {
             overflow: "hidden",
           }}
         >
-          <MainImg src={MyImage} />
+          <MainImg src={myImage[0].source} />
         </div>
         <div className="wwave">
           <svg
@@ -27,7 +31,7 @@ const Main = () => {
             xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="0 24 150 28"
             preserveAspectRatio="none"
-            shape-rendering="auto"
+            shapeRendering="auto"
           >
             <defs>
               <path
@@ -60,8 +64,8 @@ const Main = () => {
         </div>
       </div>
 
-      <MainTitle>{greeting.title}</MainTitle>
-      <SubTitle>{greeting.eventDetail}</SubTitle>
+      <MainTitle font={font}>{title}</MainTitle>
+      <SubTitle font={font}>{eventDetail}</SubTitle>
     </div>
   );
 };
@@ -72,33 +76,19 @@ const MainImg = styled.img`
   /* border-radius: 200px 200px 0 0; */
   width: 100%;
   object-fit: cover;
-  /* max-width: 450px; */
-`;
-// const VideoArch = styled.video`
-//   border-radius: 200px 200px 0 0;
-//   width: 90%;
-//   max-width: 450px;
-//   padding-top: 20px;
-// `;
-
-// const VideoSqaure = styled.video`
-//   width: 80%;
-//   max-width: 450px;
-//   padding-top: 20px;
-// `;
-
-const MainTitle = styled.p`
-  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
+`; 
+const MainTitle = styled.p<{font: string}>`
   font-size: 1.5rem;
-  color: black;
   line-height: 120%;
   white-space: pre-line;
+  margin-top: 20px;
+  font-family: "${(props) => props.font}", "Noto Sans KR", "Apple SD Gothic Neo";
 `;
 
-const SubTitle = styled.p`
-  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
+const SubTitle = styled.p<{font: string}>`
   font-size: 1.1rem;
-  color: black;
   line-height: 140%;
+  margin-top: 10px;
   white-space: pre-line;
+  font-family: "${(props) => props.font}", "Noto Sans KR", "Apple SD Gothic Neo";
 `;

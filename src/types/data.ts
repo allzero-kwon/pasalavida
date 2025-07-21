@@ -1,27 +1,26 @@
+
 export interface IData {
-  emojis: string[];
-  greeting: IGreeting;
+  type: string;
+  splashColor?: string;
+  mainColor? : string;
+  subColor? : string; 
+  mainFont? : string;
+  splashMode? : string;
+  font? : string;
+  main: IMain;
   hostInfo: IHostInfo[];
-  locationInfo: ILocationInfo[];
   mapInfo: IMapInfo;
 }
 
-export interface IGreeting {
-  mainImg: string;
+export interface IMain {
+  mainImg?: string;
   title: string;
+  subtitle?: string;
   date: string;
   message: string;
   host: {
-    groom: {
-      name: string;
-      relation: string;
-      parents: Parent;
-    };
-    bride: {
-      name: string;
-      relation: string;
-      parents: Parent;
-    };
+    groom: BrideAndGroom;
+    bride: BrideAndGroom;
   };
   eventDetail: string;
 }
@@ -34,18 +33,28 @@ export interface BrideAndGroom {
 
 type Parent = { relation: string; isDeceased?: boolean; name: string }[];
 
-export interface IHostInfo {
-  host: string;
-  accountInfo: { name: string; relation: string; bank: string; account: string }[];
-}
 
 export interface IMapInfo {
   address1: string;
   address2: string;
   naverMap: string;
+  location: ILocationInfo[];
 }
 
 export interface ILocationInfo {
   title: string;
   desc: string;
 }
+
+// Account
+export interface IHostInfo {
+  host: string;
+  accountInfo: { 
+    name: string; 
+    relation: string; 
+    bank: string; 
+    account: string;
+    kakaopayAccount?:string;
+    tossAccount?:string; }[];
+}
+

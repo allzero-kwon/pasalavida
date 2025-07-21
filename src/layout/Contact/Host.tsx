@@ -1,10 +1,15 @@
 import React from "react";
-import data from "data.json";
-import { BrideAndGroom } from "@/types/data.ts";
+import { BrideAndGroom,  } from "@/types/data.ts";
 import styled from "@emotion/styled";
+import { HighlightedText } from "@/components/Text.tsx";
+import { useColor } from "@/context/ColorContext";
 
-const Host = () => {
-  const { groom, bride } = data.greeting.host;
+interface HostProps {
+  groom: BrideAndGroom;
+  bride: BrideAndGroom;
+}
+
+const Host = ({ groom, bride }: HostProps) => {
   return (
     <>
       <HostContainer>
@@ -18,39 +23,37 @@ const Host = () => {
 export default Host;
 
 const HostInfo = ({ person }: { person: BrideAndGroom }) => {
+  const { mainColor } = useColor();
+
   return (
     <HostDetails>
       {person.parents && (
-        <>
+        <ParentName>
           {person.parents.map((parent, index) => (
             <React.Fragment key={index}>
               {index > 0 && " · "}
               {parent.name}
             </React.Fragment>
           ))}
-        </>
+        </ParentName>
       )}
       <RelationText>
         <div>의</div>
         <Relation>{person.relation}</Relation>
       </RelationText>
-      <HighlightedName>{person.name}</HighlightedName>
+      <HighlightedText color={mainColor}>{person.name}</HighlightedText>
     </HostDetails>
   );
 };
 
-const HighlightedName = styled.span`
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: rgb(255, 199, 125);
+const ParentName = styled.div`
   font-weight: bold;
-  margin-right: 5px;
+  font-size: 1.2rem;
 `;
 
 const HostContainer = styled.div`
   padding-top: 10px;
   gap: 8px;
-  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
 `;
 
 const HostDetails = styled.div`

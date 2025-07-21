@@ -5,7 +5,6 @@ const Wrapper = styled.section`
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: black;
   overflow: auto;
   margin-top: 60px;
 `;

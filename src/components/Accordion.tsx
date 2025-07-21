@@ -1,21 +1,27 @@
 import { ReactNode, useState } from "react";
 import styled from "styled-components";
 import ExpandMore from "@/assets/icons/expand_more.svg?react";
+import rawData from "data.json"
+import { IData } from "@/types/data";
 
 interface IAccordionProps {
+  id:string;
   title: string;
   children: ReactNode;
 }
-const Accordion = ({ title, children }: IAccordionProps) => {
+const Accordion = ({ id, title, children }: IAccordionProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const db: Record<string, IData> = rawData;
+  const subColor = db[id]?.subColor || "rgba(255,199,125,0.88)";
+
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <AccordionWrapper>
-      <AccordionHeader isActive={isOpen} onClick={toggleAccordion}>
+    <AccordionWrapper color={subColor}>
+      <AccordionHeader color={subColor} isactive={isOpen} onClick={toggleAccordion}>
         <p>{title}</p>
 
         <span>
@@ -29,23 +35,24 @@ const Accordion = ({ title, children }: IAccordionProps) => {
 };
 
 export default Accordion;
-
-const AccordionWrapper = styled.div`
-  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
-  border: 1px solid rgba(255, 199, 125, 0.88);
+const AccordionWrapper = styled.div<{color: string}>`
+  border: 1px solid ${(props) => props.color};
   margin-bottom: 20px;
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s ease;
 `;
 
-const AccordionHeader = styled.div<{ isActive: boolean }>`
+const AccordionHeader = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== "isactive"
+})<{ isactive: boolean, color: string }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(255, 199, 125, 0.88);
+  background-color: ${(props) => props.color};
   padding: 0 15px;
   cursor: pointer;
+  height: 40px;
   & > p {
     color: #000;
   }
@@ -55,7 +62,7 @@ const AccordionHeader = styled.div<{ isActive: boolean }>`
     justify-content: center;
     user-select: none;
     transition: all 0.3s ease;
-    transform: ${(props) => (props.isActive ? "rotate(180deg)" : undefined)};
+    transform: ${(props) => (props.isactive ? "rotate(180deg)" : undefined)};
   }
 `;
 
@@ -64,4 +71,5 @@ const AccordionContent = styled.div`
   text-align: justify;
   padding: 10px 20px;
   background-color: #ffffff;
+  color
 `;

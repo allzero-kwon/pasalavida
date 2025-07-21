@@ -1,143 +1,120 @@
 {
-  "splash": {
-    "image" : "",
-    "resizeMode" : "cover"
-  },
-  "greeting": {
-    "title": "배활기찬 \uD83D\uDC8D 신OO",
-    "message_h": "언제나 함께 있을 것 같던 아들이\n아름다운 인연을 만나 사랑을 하고\n이제 평생의 동반자로 출발하려 합니다.\n\n첫 걸음을 내딛는 이들의 출발을\n귀한 걸음 하시어\n사랑으로 함께 축복해 주시면\n더없는 기쁨으로 간직하겠습니다.\n",
-    "message_y": "언제나 함께 있을 것 같던 딸이\n아름다운 인연을 만나 사랑을 하고\n이제 평생의 동반자로 출발하려 합니다.\n\n첫 걸음을 내딛는 이들의 출발을\n귀한 걸음 하시어\n사랑으로 함께 축복해 주시면\n더없는 기쁨으로 간직하겠습니다.\n",
-    "message": "평생을 같이하고 싶은 사람을 만났습니다.\n서로를 아껴주고 사랑하며 재미있게 살겠습니다.\n저희 두 사람의 첫걸음이 시작되는 자리에 오셔서\n축복해주시면 더 없는 기쁨으로 간직하겠습니다. \n",
-    "host": {
-      "groom": {
-        "name": "기찬",
-        "relation": "장남",
-        "parents": [
+  "default": {
+    "type": "simple",
+    "mainColor": "#f78828",
+    "subColor": "rgba(255,199,125,0.88)",
+    "bgColor" : "#fff",
+    "fontColor" : "#000",
+    "splashColor": "#000",
+    "main": {
+      "title": "OO과 XX, 결혼합니다",
+      "message": "서로의 가장 좋은 친구이자\n오래된 연인이었던 우리가,\n이제는 하나의 가족이 되려 합니다.\n\n함께 걸어온 시간,\n그 길 위에서 배운 사랑과 믿음을 바탕으로\n저희 두 사람이 인생의 또 다른 시작을 하려 합니다.\n\n귀한 걸음으로 축복해주시면 감사하겠습니다.\n",
+      "videoSrc": "",
+      "date": "2030년 1월 1일",
+      "host": {
+        "groom": {
+          "name": "OO",
+          "relation": "장남",
+          "parents": [
+            {
+              "relation": "아버지",
+              "name": "김OO"
+            },
+            {
+              "relation": "어머니",
+              "name": "김OO"
+            }
+          ]
+        },
+        "bride": {
+          "name": "XX",
+          "relation": "장녀",
+          "parents": [
+            {
+              "relation": "아버지",
+              "name": "이XX"
+            },
+            {
+              "relation": "어머니",
+              "name": "이XX"
+            }
+          ]
+        }
+      },
+      "eventDetail": "2030년 1월 1일 1시\n신라호텔 영빈관"
+    },
+    "mapInfo": {
+      "address1": "신라호텔 영빈관",
+      "address2": "서울 중구 동호로 249",
+      "naverMap": "https://map.naver.com/p/search/신라호텔+영빈관/place/18698760?c=15.00,0,0,0,dh&placePath=/home?entry=bmp&from=map&fromPanelNum=2&timestamp=202507211941&locale=ko&svcName=map_pcv5&searchText=신라호텔+영빈관",
+      "location": [
+        {
+          "title": "지하철",
+          "desc": "동대입구역 5번 출구에서 도보 5분 (신라호텔 셔틀버스 이용)"
+        },
+        {
+          "title": "주차장",
+          "desc": "자체주차장 (총 1000대 수용가능)"
+        }
+      ]
+    },
+    "hostInfo": [
+      {
+        "host": "신랑측",
+        "accountInfo": [
           {
-            "relation": "아버지",
-            "name": "박노정"
+            "name": "김OO",
+            "relation": "신랑 아버지",
+            "bank": "농협",
+            "account": "000-000-000000"
           },
           {
-            "relation": "어머니",
-            "name": "윤순옥"
+            "name": "김OO",
+            "relation": "신랑 어머니",
+            "bank": "농협",
+            "account": "000-000-000000",
+            "kakaopayAccount": "",
+            "tossAccount": ""
+          },
+          {
+            "name": "김OO",
+            "relation": "신랑",
+            "bank": "농협",
+            "account": "000-000-000000",
+            "kakaopayAccount": "",
+            "tossAccount": ""
           }
         ]
       },
-      "bride": {
-        "name": "OO",
-        "relation": "장녀",
-        "parents": [
+      {
+        "host": "신부측",
+        "accountInfo": [
           {
-            "relation": "아버지",
-            "name": "신성문"
+            "name": "이XX",
+            "relation": "신부 아버지",
+            "bank": "국민",
+            "account": "000-000-000000",
+            "kakaopayAccount": "",
+            "tossAccount": ""
           },
           {
-            "relation": "어머니",
-            "name": "정미정"
+            "name": "이XX",
+            "relation": "신부 어머니",
+            "bank": "국민",
+            "account": "000-000-000000",
+            "kakaopayAccount": "",
+            "tossAccount": ""
+          },
+          {
+            "name": "이XX",
+            "relation": "신부",
+            "bank": "국민",
+            "account": "000-000-000000",
+            "kakaopayAccount": "",
+            "tossAccount": ""
           }
         ]
       }
-    },
-    "eventDetail": "2025년 4월 19일 18시 30분\nM스타하우스 1층 블루스타홀"
-  },
-  "hostInfo": [
-    {
-      "host": "신랑측",
-      "accountInfo": [
-        {
-          "name": "박노정",
-          "relation": "신랑 아버지",
-          "bank": "농협",
-          "account": "100050-56-012279",
-          "kakaopayAccount": "",
-          "tossAccount": ""
-        },
-        {
-          "name": "윤순옥",
-          "relation": "신랑 어머니",
-          "bank": "농협",
-          "account": "352-0067-9756-43",
-          "kakaopayAccount": "",
-          "tossAccount": ""
-        },
-        {
-          "name": "배활기찬",
-          "relation": "신랑",
-          "bank": "국민",
-          "account": "919301-01-135460",
-          "kakaopayAccount": "",
-          "tossAccount": ""
-        }
-      ]
-    },
-    {
-      "host": "신부측",
-      "accountInfo": [
-        {
-          "name": "신성문",
-          "relation": "신부 아버지",
-          "bank": "대구은행",
-          "account": "156-07-045882-003",
-          "kakaopayAccount": "",
-          "tossAccount": ""
-        },
-        {
-          "name": "정미정",
-          "relation": "신부 어머니",
-          "bank": "대구은행",
-          "account": "052-08-219165",
-          "kakaopayAccount": "",
-          "tossAccount": ""
-        },
-        {
-          "name": "신OO",
-          "relation": "신부",
-          "bank": "대구은행",
-          "account": "508-11-699369-0",
-          "kakaopayAccount": "",
-          "tossAccount": ""
-        }
-      ]
-    }
-  ],
-  "mapInfo": {
-    "address1": "M스타하우스 1층 블루스타홀",
-    "address2": "대구광역시 동구 동촌로 316(방촌동)",
-    "naverMap": "https://map.naver.com/p/entry/place/19550872?lng=128.6738573&lat=35.8778522&placePath=%2F&entry=pll&searchType=place&c=15.00,0,0,0,dh"
-  },
-  "locationInfo": [
-    {
-      "title": "\uD83D\uDCCD 지하철", 
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 방촌역(1호선)에서 하차 후 3번 출구(도보 5분거리)\n\uD83D\uDC49\uD83C\uDFFB 동대구역에서 1호선 안심행 열차 승차 후 방촌역에서 하차"
-    },
-    {
-      "title": "\uD83D\uDCCD 버스", 
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 방촌치안센터 618, 719, 805, 808, 818, 836, 980, 동구1, 동구2"
-    },
-    {
-      "title": "\uD83D\uDCCD 주차안내",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 경부고속도로 동대구IC에서 5분거리 | 자체주차장(총 1000대 수용가능)"
-    },
-    {
-      "title": "\uD83D\uDCCD 대절 버스 탑승 장소 및 시간",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 경기도 파주시 법원읍 하나로마트 천현농협본점 앞에서 8시30분 출발 \n \uD83D\uDC49\uD83C\uDFFB 경기도 파주시 월롱면 덕은5리 마을회관 앞에서 9시 출발"
-    }
-  ],
-  "emojis": [
-    "❤️",
-    "💛",
-    "💌",
-    "🥹",
-    "🥳",
-    "👰🏻‍",
-    "🤵🏻‍️",
-    "🤍",
-    "✨",
-    "💍",
-    "💒",
-    "💕",
-    "😍",
-    "🔔",
-    "💘"
-  ]
+    ]
+  }
 }

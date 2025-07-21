@@ -9,14 +9,24 @@ import Invitation from "@/layout/Invitation/Invitation.tsx";
 import Location from "@/layout/Location/Location.tsx";
 import Main from "@/layout/MainPic/Main";
 import { motion } from "framer-motion";
+import { IData } from "@/types/data";
+import { useColor } from "@/context/ColorContext";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
-const SimpleLayout = () => {
+interface LayoutProp{
+  id: string;
+  data : IData
+}
+
+
+const SimpleLayout = ({id, data}: LayoutProp) => {
   const galleryRef = useRef(null);
+  const { mainColor, fontColor, bgColor } = useColor();
 
   return (
-    <Container>
+    <Container bgColor={bgColor} fontColor={fontColor} font={data.font || "Gowun Dodum"} >
       <Wrapper style={{ marginTop: "0px" }}>
-        <Main />
+        <Main font={data.mainFont || data.font || "Gowun Dodum"} id={id} props={data.main} />
       </Wrapper>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -29,11 +39,16 @@ const SimpleLayout = () => {
         }}
       >
         <Wrapper>
-          <Heading1>
-            <br />
-            모시는 글
+          <Heading1 color={mainColor}>
+            <DotLottieReact
+              src="https://lottie.host/2555558f-ceeb-47f0-b173-f7e9ceb2bdaf/r9FXjcWp4n.lottie"
+              loop
+              autoplay
+              style={{width:"90px"}}
+            />
+            
           </Heading1>
-          <Invitation />
+          <Invitation {... data.main}/>
         </Wrapper>
       </motion.div>
       <motion.div
@@ -47,8 +62,8 @@ const SimpleLayout = () => {
         }}
       >
         <Wrapper ref={galleryRef}>
-          <Heading1>Gallery</Heading1>
-          <GalleryWrap />
+          <Heading1 color={mainColor}>Gallery</Heading1>
+          <GalleryWrap id={id} color="white"/>
         </Wrapper>
       </motion.div>
       <motion.div
@@ -62,8 +77,8 @@ const SimpleLayout = () => {
         }}
       >
         <Wrapper>
-          <Heading1>오시는 길</Heading1>
-          <Location />
+          <Heading1 style={{marginBottom: "15px"}} color={mainColor}>Location</Heading1>
+          <Location mapInfo={data.mapInfo}/>
         </Wrapper>
       </motion.div>
       <motion.div
@@ -77,8 +92,8 @@ const SimpleLayout = () => {
         }}
       >
         <Wrapper>
-          <Heading1>마음 전하실 곳</Heading1>
-          <Account />
+          <Heading1 color={mainColor}>마음 전하실 곳</Heading1>
+          <Account id={id} hostInfo={data.hostInfo}/>
         </Wrapper>
       </motion.div>
       <motion.div
@@ -92,7 +107,7 @@ const SimpleLayout = () => {
         }}
       >
         {/* <Wrapper>
-          <Heading1>신랑 신부에게</Heading1>
+          <Heading1 color={mainColor}>신랑 신부에게</Heading1>
           <Guestbook />
         </Wrapper> */}
       </motion.div>

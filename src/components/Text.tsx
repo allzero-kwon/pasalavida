@@ -1,9 +1,7 @@
 import styled from "@emotion/styled";
 
 export const IntroTitle = styled.p`
-  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
   font-size: 3rem;
-  color: #000;
   margin: 20px;
   white-space: pre-line;
   position: absolute;
@@ -12,11 +10,19 @@ export const IntroTitle = styled.p`
   z-index: 1;
 `;
 
-export const Heading1 = styled.p`
-  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
+export const HighlightedText = styled.span<{color:string}>`
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: ${(props) => props.color};
+  font-weight: bold;
+  margin-right: 5px;
+`;
+
+
+export const Heading1 = styled.p<{color:string}>`
   font-size: 1.5rem;
   margin: 10px;
-  color: #f78828;
+  color: ${(props) => props.color};
   white-space: pre-line;
 `;
 
@@ -27,10 +33,8 @@ export const Heading2 = styled.p`
 `;
 
 export const PointTitle = styled.p`
-  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
-  line-height: 1;
+  line-height: 1.5rem;
   margin: 0;
-  color: #000;
   white-space: pre-line;
 `;
 
@@ -41,6 +45,7 @@ export const Paragraph = styled.p`
 
 export const Caption = styled.p<{ textAlign?: string }>`
   font-weight: 200;
+  line-height: 1.5rem;
   text-align: ${(props) => (props.textAlign ? props.textAlign : "start")};
   white-space: pre-line;
   font-size: 14px;

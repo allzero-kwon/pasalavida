@@ -19,6 +19,7 @@ const AccountWrap = ({
   kakaopayAccount,
   tossAccount,
 }: IAccountProps) => {
+
   const handleCopy = () => {
     navigator.clipboard.writeText(account).then(
       () => {
@@ -65,7 +66,6 @@ const AccountWrap = ({
 };
 
 const Wrapper = styled.div`
-  font-family: "MapoFlowerIsland", "Noto Sans KR", "Apple SD Gothic Neo", serif;
   padding: 10px 0;
   border-bottom: 1px solid #dfdfdf;
   &:last-of-type {
@@ -81,7 +81,6 @@ const Info = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
-  color: #000;
   margin: 5px 0;
 `;
 const Relation = styled.span`
@@ -89,6 +88,7 @@ const Relation = styled.span`
 `;
 const Name = styled.span`
   font-size: 1rem;
+  color: #000;
 `;
 
 const Details = styled.div`
@@ -97,7 +97,9 @@ const Details = styled.div`
   justify-content: space-between;
 `;
 
-const AccountInfo = styled.div``;
+const AccountInfo = styled.div`
+  color: #000;
+`;
 const CopyButton = styled.button`
   border: none;
   border-radius: 5px;

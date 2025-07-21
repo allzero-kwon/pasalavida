@@ -1,17 +1,19 @@
 import styled from "@emotion/styled";
-import data from "data.json";
 import { Caption, PointTitle } from "@/components/Text.tsx";
 import { ILocationInfo } from "@/types/data.ts";
 
-const Address = () => {
-  const { locationInfo } = data;
+interface LocationInfoProps{
+  location: ILocationInfo[];
+}
+
+const Address = ({location}: LocationInfoProps) => {
   return (
     <WayWrapper>
-      {locationInfo?.map((item: ILocationInfo) => {
+      {location?.map((item: ILocationInfo) => {
         const { title, desc } = item;
         return (
           <Way key={title}>
-            <PointTitle>{title}</PointTitle>
+            <PointTitle>📍{title}</PointTitle>
             <Caption>{desc}</Caption>
           </Way>
         );

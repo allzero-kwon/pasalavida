@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
-import data from "data.json";
 import Button from "@/components/Button.tsx";
-
-const MapButtons = () => {
-  const { naverMap } = data.mapInfo;
+interface MapButtonsProps {
+  naverMap: string;
+}
+const MapButtons = ({naverMap}:MapButtonsProps) => {
 
   return (
     <MapButtonWrapper>

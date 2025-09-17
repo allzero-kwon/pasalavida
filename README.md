@@ -8,8 +8,8 @@ https://mywday.site/default/
 --- 
 
 ## 2. 프로젝트 셋업 & 배포
-- 프로젝트 클론
-
+- 프로젝트 fork & clone
+(dev branch) 
 https://github.com/allzero-kwon/pasalavida.git
 
 - node 설치
@@ -20,7 +20,7 @@ https://velog.io/@ljs923/Node.js-다운로드-및-설치하기
 ```
 npm install 
 npm run build
-npm run deploy
+npm run deploy # 본인 레포에서 run deploy 해야함 
 ```
 
 - 프로젝트 중간중간 확인 

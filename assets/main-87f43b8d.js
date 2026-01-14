@@ -315,7 +315,7 @@ Error generating stack: `+s.message+`
   display: flex;
   gap: 8px;
   justify-content: center;
-`,QO=({address:t})=>{const e=S2(),[n,i]=b.useState({lat:0,lng:0});return b.useEffect(()=>{t&&naver.maps.Service.geocode({query:t},(r,s)=>{if(r===naver.maps.Service.Status.OK){const o=s.v2.addresses[0];o&&i({lat:parseFloat(o.y),lng:parseFloat(o.x)})}else console.error("Geocoding failed:",r)})},[t]),E.jsx(Db,{style:{width:"100%",height:"300px",margin:"20px 0px 10px"},children:E.jsx(pT,{center:new e.LatLng(n.lat,n.lng),defaultZoom:18,draggable:!1,pinchZoom:!1,scrollWheel:!1,keyboardShortcuts:!1,children:E.jsx(_b,{position:new e.LatLng(n.lat,n.lng)})})})},_v=({mapInfo:t})=>E.jsxs(JO,{children:[E.jsx(Pg,{children:t.address1}),E.jsx(Ig,{textAlign:"center",children:t.address2}),E.jsx(QO,{address:t.address2}),E.jsx(qO,{naverMap:t.naverMap}),E.jsx(GO,{location:t.location})]}),JO=U.div`
+`,QO=({address:t})=>{const e=S2(),[n,i]=b.useState({lat:0,lng:0});return b.useEffect(()=>{t&&naver.maps.Service.geocode({query:t},(r,s)=>{if(r===naver.maps.Service.Status.OK){const o=s.v2.addresses[0];o&&i({lat:parseFloat(o.y),lng:parseFloat(o.x)})}else console.error("Geocoding failed:",r)})},[t]),E.jsx(Db,{style:{width:"100%",height:"300px",margin:"20px 0px 10px"},children:E.jsx(pT,{center:new e.LatLng(n.lat,n.lng),defaultZoom:15,draggable:!1,pinchZoom:!1,scrollWheel:!1,keyboardShortcuts:!1,children:E.jsx(_b,{position:new e.LatLng(n.lat,n.lng)})})})},_v=({mapInfo:t})=>E.jsxs(JO,{children:[E.jsx(Pg,{children:t.address1}),E.jsx(Ig,{textAlign:"center",children:t.address2}),E.jsx(QO,{address:t.address2}),E.jsx(qO,{naverMap:t.naverMap}),E.jsx(GO,{location:t.location})]}),JO=U.div`
   width: 100%;
   display: flex;
   flex-direction: column;

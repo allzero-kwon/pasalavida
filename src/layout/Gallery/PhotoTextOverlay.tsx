@@ -41,19 +41,23 @@ interface Props {
   radius?: number;
 }
 
-const Wrap = styled.div<{ $ratio?: string; $radius: number }>`
+const Wrap = styled.div<{
+  $ratio?: string;
+  $radius: number;
+  $hasOverlayText: boolean;
+}>`
   position: relative;
   width: 100%;
   overflow: visible;
   border-radius: ${({ $radius }) => $radius}px;
 
   /* aspect-ratio fallback: padding-top trick */
-  ${({ $ratio }) => {
+  ${({ $ratio, $hasOverlayText }) => {
     if (!$ratio) return "";
     // Parse "width / height" or "width/height"
     const parts = $ratio.split("/").map((p) => parseFloat(p.trim()));
     if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
-      const percentage = (parts[1] / parts[0]) * 100;
+      const percentage = $hasOverlayText ? (parts[1] / parts[0]) * 100 : 100;
       return `
         &::before {
           content: "";
@@ -139,8 +143,14 @@ export default function PhotoTextOverlay({
   objectFit = "cover",
   radius = 0,
 }: Props) {
+  const hasOverlayText = overlays.some((o) => o.text && o.text.trim() !== "");
+
   return (
-    <Wrap $ratio={aspectRatio} $radius={radius}>
+    <Wrap
+      $ratio={aspectRatio}
+      $radius={radius}
+      $hasOverlayText={hasOverlayText}
+    >
       <Inner>
         <Img src={src} alt={alt} $fit={objectFit} />
         {overlays.map((o, i) => (

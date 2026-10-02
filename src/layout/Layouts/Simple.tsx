@@ -56,7 +56,7 @@ const SimpleLayout = ({id, data}: LayoutProp) => {
           duration: 3,
           y: { duration: 1 },
         }}
-        style={{ marginTop: "40px" }}
+        style={{ marginTop: "10px" }}
       >
         <Wrapper>
           <Heading1 color={mainColor}/> 

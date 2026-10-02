@@ -263,6 +263,133 @@
       }
     ]
   },
+  "gs1129": {
+    "type": "simple",
+    "mainColor": "#ebc0d1",
+    "subColor": "#ebc0d1ee",
+    "bgColor": "#000",
+    "fontColor": "#fff",
+    "font": "AritaDotumKR",
+    "splashColor": "#000",
+    "date": "20261129",
+    "videoSrc": "_-mwtCr7IPI",
+    "main": {
+      "title": "광호과 수경, 결혼합니다",
+      "message": "낙엽이 완연히 물들어가는 계절\n저희의 시간도 아름답게 쌓여왔습니다.\n소중한 축복으로 추억을 함께 쌓아주시면 감사하겠습니다.\n",
+      "date": "2026년 11월 29일 일요일 오전 11시",
+      "gallery": {
+        "message1": "",
+        "y1": 18,
+        "rotate1": 356,
+        "message2": "",
+        "y2": 4
+      },
+      "host": {
+        "groom": {
+          "name": "광호",
+          "relation": "아들",
+          "parents": [
+            {
+              "relation": "아버지",
+              "name": "정형진"
+            },
+            {
+              "relation": "어머니",
+              "name": "이동희"
+            }
+          ]
+        },
+        "bride": {
+          "name": "수경",
+          "relation": "딸",
+          "parents": [
+            {
+              "relation": "아버지",
+              "name": "이시우"
+            },
+            {
+              "relation": "어머니",
+              "name": "유병례"
+            }
+          ]
+        }
+      },
+      "eventDetail": "르비르모어 선릉 2층 클리타홀"
+    },
+    "mapInfo": {
+      "address1": "르비르모어 선릉 2층 클리타홀",
+      "address2": "서울 강남구 테헤란로 406 샹제리제센터 A동",
+      "naverMap": "https://map.naver.com/p/entry/place/1843439341?placePath=%2Fhome%3Ffrom%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202610030018%26locale%3Dko%26svcName%3Dmap_pcv5&c=15.00,0,0,0,dh",
+      "location": [
+        {
+          "title": "지하철",
+          "desc": "2호선,분당선 선릉역 1번 출구 연결"
+        },
+        {
+          "title": "버스",
+          "desc": "선릉역 하차 (146, 333, 341, 360, 740, 1700, 2000, 8001, 9303)"
+        },
+        {
+          "title": "주차장",
+          "desc": "무료주차 2시간 (입차 발렛)"
+        }
+      ]
+    },
+    "hostInfo": [
+      {
+        "host": "신랑측",
+        "accountInfo": [
+          {
+            "name": "정형진",
+            "relation": "신랑 아버지",
+            "bank": "농협",
+            "account": "451087-52-00009-6",
+            "phone": ""
+          },
+          {
+            "name": "이동희",
+            "relation": "신랑 어머니",
+            "bank": "하나은행",
+            "account": "672-910387-45407",
+            "phone": ""
+          },
+          {
+            "name": "정광호",
+            "relation": "신랑",
+            "bank": "새마을금고",
+            "account": "9003-2623-4800-3",
+            "phone": ""
+          }
+        ]
+      },
+      {
+        "host": "신부측",
+        "accountInfo": [
+          {
+            "name": "이시우",
+            "relation": "신부 아버지",
+            "bank": "신한은행",
+            "account": "110-030-022581",
+            "phone": ""
+          },
+          {
+            "name": "유병례",
+            "relation": "신부 어머니",
+            "bank": "기업은행",
+            "account": "378-035027-01-010",
+            "phone": ""
+          },
+          {
+            "name": "이수경",
+            "relation": "신부",
+            "bank": "농협",
+            "account": "302-1181-0952-31",
+            "phone": ""
+          }
+        ]
+      }
+    ]
+  },
   "dh0613": {
     "type": "simple",
     "mainColor": "#ebc0d1",

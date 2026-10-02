@@ -148,7 +148,7 @@ export const getInvitationMediaById = (id: string): InvitationMedia => {
 
 const Wrapper = styled.div`
   position: relative;
-  width: 100%;
+  width: 50%;
   margin: 20px 0px 80px;
   cursor: default;
   pointer-events: none;

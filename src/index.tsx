@@ -3,16 +3,14 @@ import SimpleLayout from "@/layout/Layouts/Simple";
 import rawData from "data.json"
 import { useParams } from "react-router-dom";
 import { IData } from "./types/data";
-import MovieLayout from "./layout/Layouts/Movie";
 import Splash from "@/components/Splash";
-import { ColorProvider } from "@/context/ColorContext";
+import { UserDataProvider } from "@/context/UserDataContext";
 import { HelmetProvider } from "react-helmet-async";
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Snowfall } from 'react-snowfall'
 import petal from '@/assets/icons/petal3.png'
-
 
 const IndexPage = () => {
   const db: Record<string, IData> = rawData;
@@ -44,18 +42,42 @@ const IndexPage = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (splashVisible) {
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";   
+      document.body.style.width = "100%";
+      document.body.style.touchAction = "none";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.touchAction = "";
+      window.scrollTo({ top: 0 });
+
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.touchAction = "";
+    };
+  }, [splashVisible]);
+
+
 
   return (
 
     <NavermapsProvider ncpClientId={ncpClientId}>
       <HelmetProvider>
-        <ColorProvider id={pageId}>
+        <UserDataProvider id={pageId}>
           <Helmet>
             <title>{data.main?.title || "우리 결혼해요"}</title>
             <meta property="og:title" content={data.main?.title} />
             <meta name="description" content={data.main?.eventDetail || "초대합니다"} />
-            <meta property="og:image" content={`https://mywday.site/${pageId}/main/main.png`} />
-            <meta property="og:url" content={`https://mywday.site/${pageId}`} />
+            <meta property="og:image" content={`https://luvisall.site/${pageId}/main/main.jpeg`} />
+            <meta property="og:url" content={`https://luvisall.site/${pageId}`} />
           </Helmet>
           <Snowfall color="white" 
                   speed={[0,0.1]}
@@ -72,6 +94,7 @@ const IndexPage = () => {
 
           <>
             {data.splashColor && splashVisible ? <Splash
+              id={pageId}
               title={data.main?.title || ""}
               date={data.main?.date}
               eventDetail={data.main?.eventDetail}
@@ -81,13 +104,10 @@ const IndexPage = () => {
             /> : <></>}
 
             <LayoutContainer>
-              {data.type == "movie" ?
-                <MovieLayout id={pageId} data={data} />
-                : <SimpleLayout id={pageId} data={data} />
-              }
+              <SimpleLayout id={pageId} data={data} />
             </LayoutContainer>
           </>
-        </ColorProvider>
+        </UserDataProvider>
       </HelmetProvider>
     </NavermapsProvider>
   );

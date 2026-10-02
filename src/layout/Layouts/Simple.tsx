@@ -10,8 +10,14 @@ import Location from "@/layout/Location/Location.tsx";
 import Main from "@/layout/MainPic/Main";
 import { motion } from "framer-motion";
 import { IData } from "@/types/data";
-import { useColor } from "@/context/ColorContext";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { useUserData } from "@/context/UserDataContext";
+// import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import Calendar from "../Calendar/Calendar";
+import WeddingEnvelope from "../Invitation/WeddingEnvelope";
+import Host from "../Contact/Host";
+import VideoGallery from "../Gallery/VideoGallery";
+import Guestbook from "../Guestbook/Guestbook";
+import GuestbookPhotoOverlay from "../Guestbook/GuestbookPhotoOverlay";
 
 interface LayoutProp{
   id: string;
@@ -21,13 +27,58 @@ interface LayoutProp{
 
 const SimpleLayout = ({id, data}: LayoutProp) => {
   const galleryRef = useRef(null);
-  const { mainColor, fontColor, bgColor } = useColor();
+  const { mainColor, fontColor, bgColor } = useUserData();
 
   return (
     <Container bgColor={bgColor} fontColor={fontColor} font={data.font || "Gowun Dodum"} >
-      <Wrapper style={{ marginTop: "0px" }}>
-        <Main font={data.mainFont || data.font || "Gowun Dodum"} id={id} props={data.main} />
-      </Wrapper>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{
+          ease: "easeInOut",
+          duration: 3,
+          y: { duration: 1 },
+        }}
+      >
+        <Wrapper style={{ marginTop: "0px" }}>
+          <Main id={id}/>
+        </Wrapper>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{
+          ease: "easeInOut",
+          duration: 3,
+          y: { duration: 1 },
+        }}
+        style={{ marginTop: "40px" }}
+      >
+        <Wrapper>
+          <Heading1 color={mainColor}/> 
+          <Invitation id={id}/>
+        </Wrapper>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{
+          ease: "easeInOut",
+          duration: 3,
+          y: { duration: 1 },
+        }}
+      >
+        <Wrapper> 
+          <WeddingEnvelope id={id} />
+        </Wrapper>
+      </motion.div>
+
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -38,19 +89,11 @@ const SimpleLayout = ({id, data}: LayoutProp) => {
           y: { duration: 1 },
         }}
       >
-        <Wrapper>
-          <Heading1 color={mainColor}>
-            <DotLottieReact
-              src="https://lottie.host/2555558f-ceeb-47f0-b173-f7e9ceb2bdaf/r9FXjcWp4n.lottie"
-              loop
-              autoplay
-              style={{width:"90px"}}
-            />
-            
-          </Heading1>
-          <Invitation {... data.main}/>
+        <Wrapper> 
+          <Host groom={data.main.host.groom} bride={data.main.host.bride}/>
         </Wrapper>
       </motion.div>
+
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -62,10 +105,43 @@ const SimpleLayout = ({id, data}: LayoutProp) => {
         }}
       >
         <Wrapper ref={galleryRef}>
-          <Heading1 color={mainColor}>Gallery</Heading1>
-          <GalleryWrap id={id} color="white"/>
+          <VideoGallery id={id} videoSrc={data.videoSrc} />
         </Wrapper>
       </motion.div>
+      
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{
+          ease: "easeInOut",
+          duration: 2,
+          y: { duration: 1 },
+        }}
+      >
+        <Wrapper ref={galleryRef}  style={{ marginBottom: "0px" }}>
+          {/* <Heading1 color={mainColor}>Gallery</Heading1> */}
+          <GalleryWrap/> 
+        </Wrapper>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{
+          ease: "easeInOut",
+          duration: 2,
+          y: { duration: 1 },
+        }}
+      >
+        <Wrapper style={{ marginTop: "0px" }}>
+          <Calendar id={id} date={data.date} color={data.subColor} fontColor={fontColor} />
+        </Wrapper>
+      </motion.div>
+
+
+
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -106,10 +182,11 @@ const SimpleLayout = ({id, data}: LayoutProp) => {
           y: { duration: 1 },
         }}
       >
-        {/* <Wrapper>
+        <Wrapper>
           <Heading1 color={mainColor}>신랑 신부에게</Heading1>
-          <Guestbook />
-        </Wrapper> */}
+          <GuestbookPhotoOverlay id={id} />
+          <Guestbook id={id}/>
+        </Wrapper>
       </motion.div>
     </Container>
   );

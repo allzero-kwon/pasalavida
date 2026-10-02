@@ -2,7 +2,7 @@ import React from "react";
 import { BrideAndGroom,  } from "@/types/data.ts";
 import styled from "@emotion/styled";
 import { HighlightedText } from "@/components/Text.tsx";
-import { useColor } from "@/context/ColorContext";
+import { useUserData } from "@/context/UserDataContext";
 
 interface HostProps {
   groom: BrideAndGroom;
@@ -23,7 +23,7 @@ const Host = ({ groom, bride }: HostProps) => {
 export default Host;
 
 const HostInfo = ({ person }: { person: BrideAndGroom }) => {
-  const { mainColor } = useColor();
+  const { mainColor } = useUserData();
 
   return (
     <HostDetails>

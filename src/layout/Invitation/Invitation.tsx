@@ -1,21 +1,49 @@
 import styled from "@emotion/styled";
-import Host from "../Contact/Host.tsx";
-import { Paragraph } from "@/components/Text.tsx";
-import { IMain } from "@/types/data.ts"
+import { getInvitationAssetsById } from "../Gallery/Images";
 
+interface InvitationProps {
+  id: string;
+}
 
-const Invitation = (props: IMain) => {
-  const { message, host } = props;
+const Invitation = ({ id }: InvitationProps) => {
+  const assets = getInvitationAssetsById(id);
 
   return (
-    <InvitationWrapper>
-      <Paragraph>
-        {message}
-      </Paragraph>
-      <Host groom={host.groom} bride={host.bride}/>
+    <InvitationWrapper >
+      {assets.icon && (
+        <IconImage>
+          <img src={assets.icon} alt="icon" />
+        </IconImage>
+      )}
+      {assets.paragraph && (
+        <ParagraphImage>
+          <img src={assets.paragraph} alt="결혼 인사말" />
+        </ParagraphImage>
+      )}
     </InvitationWrapper>
   );
 };
+const IconImage = styled.div`
+  margin: 40px auto 10px;
+  width: 35%;
+  max-width: 35%;
+
+  img {
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+`;
+const ParagraphImage = styled.div`
+  width: 100%;
+  max-width: 80%;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+`;
+
 
 export default Invitation;
 
@@ -23,5 +51,5 @@ const InvitationWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 0px;
 `;

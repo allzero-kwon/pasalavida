@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const Button = styled.button`
+const Button = styled.button<{ color?: string }>`
   padding: 0.5em 0.8em;
   border-radius: 8px;
   border: 1px solid #dfdfdf;
@@ -13,6 +13,7 @@ const Button = styled.button`
   align-items: center;
   text-decoration: none;
   gap: 2px;
+  color: ${(props: { color?: string }) => props.color || "#646cff"};
 `.withComponent("a");
 
 export default Button;

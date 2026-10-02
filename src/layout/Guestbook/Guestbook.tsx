@@ -1,25 +1,21 @@
-// import styled from "@emotion/styled";
-// import CommentForm from "./CommentForm.tsx";
-// import { Heading2 } from "@/components/Text.tsx";
+import GuestbookForm from "./GuestbookForm";
+// import GuestbookList from "./GuestbookList";
+import styled from "@emotion/styled";
 
-// const Guestbook = () => {
-//   return (
-//     <GuestBookWrapper>
-//       <Heading2>
-//         메시지를 남겨주세요.
-//         <br />
-//         결혼식 하루 뒤, 신랑 신부에게 전달됩니다.
-//       </Heading2>
-//       <CommentForm />
-//     </GuestBookWrapper>
-//   );
-// };
+const Guestbook = ({ id }: { id: string }) => {
+  return (
+    <Wrapper>
+      <GuestbookForm id={id}/>
+      {/* <GuestbookList /> */}
+    </Wrapper>
+  );
+};
 
-// export default Guestbook;
-
-// const GuestBookWrapper = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   gap: 8px;
-//   margin-bottom: 50px;
-// `;
+export default Guestbook;
+const Wrapper = styled.div`
+  margin: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 80%;
+`;

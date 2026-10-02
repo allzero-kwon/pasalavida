@@ -16,10 +16,11 @@ export const HighlightedText = styled.span<{color:string}>`
   color: ${(props) => props.color};
   font-weight: bold;
   margin-right: 5px;
+  margin-left: 3px;
 `;
 
 
-export const Heading1 = styled.p<{color:string}>`
+export const Heading1 = styled.div<{color:string}>`
   font-size: 1.5rem;
   margin: 10px;
   color: ${(props) => props.color};
@@ -38,9 +39,17 @@ export const PointTitle = styled.p`
   white-space: pre-line;
 `;
 
+// export const Paragraph = styled.p`
+//   line-height: 2.2rem;
+//   white-space: pre-line;
+// `;
 export const Paragraph = styled.p`
-  line-height: 2.2rem;
+  font-family: "SSMullaeler", cursive;
+  font-size: 1.15rem;
+  line-height: 2.4rem;
   white-space: pre-line;
+  text-align: center;
+  letter-spacing: 0.02em;
 `;
 
 export const Caption = styled.p<{ textAlign?: string }>`

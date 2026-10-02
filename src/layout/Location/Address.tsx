@@ -28,7 +28,7 @@ const WayWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 20px 0px;
+  margin: 20px 30px;
   gap: 20px;
 `;
 

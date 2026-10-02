@@ -12,6 +12,51 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "AritaDotumKR";
+    src: url("./AritaDotumKR-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "MonoplexKR";
+    src: url("./MonoplexKR-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "LeferiBaseRegular";
+    src: url("./LeferiBaseRegular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "SSFaithfulness";
+    src: url("./SSFaithfulness.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SSVeryBadHandwritingRegular";
+    src: url("./SSVeryBadHandwritingRegular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "SSMullaeler";
+    src: url("./SSMullaeler.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 @font-face {
     font-family: 'MapoFlowerIsland';

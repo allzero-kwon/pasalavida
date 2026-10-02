@@ -4,12 +4,16 @@ export interface IData {
   splashColor?: string;
   mainColor? : string;
   subColor? : string; 
+  bgColor? : string;
+  fontColor? : string;
   mainFont? : string;
   splashMode? : string;
   font? : string;
+  date : string;
   main: IMain;
   hostInfo: IHostInfo[];
   mapInfo: IMapInfo;
+  videoSrc?: string;
 }
 
 export interface IMain {
@@ -18,6 +22,22 @@ export interface IMain {
   subtitle?: string;
   date: string;
   message: string;
+  gallery: {
+    message1: string;
+    font1?: string;
+    y1?: number;
+    size1?: number;
+    x1?: number;
+    rotate1?: number;
+    color1?: string;
+    message2: string;
+    font2?: string;
+    y2?: number;
+    size2?: number;
+    x2?: number;
+    rotate2?: number;
+    color2?: string;
+  },
   host: {
     groom: BrideAndGroom;
     bride: BrideAndGroom;

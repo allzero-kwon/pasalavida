@@ -1,11 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+
+
+import legacy from '@vitejs/plugin-legacy'
 import withReactRouter from 'vite-plugin-next-react-router';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import svgr from "vite-plugin-svgr";
 import history from 'connect-history-api-fallback';
 import fs from 'fs'
 import path from 'path'
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,8 +22,12 @@ export default defineConfig({
       }
     }
   },
-  plugins: [react(),
-  withReactRouter(),
+  plugins: [
+    react(),
+    legacy({
+      targets: ['defaults', 'not IE 11', 'iOS >= 12'],
+    }),
+    withReactRouter(),
   tsconfigPaths(),
   svgr(),
     {
@@ -37,7 +45,6 @@ export default defineConfig({
         const notFoundPath = path.resolve(__dirname, 'dist/404.html');
         if (fs.existsSync(indexPath)) {
           fs.copyFileSync(indexPath, notFoundPath);
-          console.log('✅ Copied index.html → 404.html for SPA fallback on GitHub Pages');
         }
       }
     },],

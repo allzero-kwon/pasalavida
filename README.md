@@ -3,7 +3,7 @@ Pasalavida project
 
 ## 0. 기본 정보
 ### Sample
-https://mywday.site/default/
+https://luvisall.site/default/
 
 --- 
 
@@ -35,7 +35,7 @@ npm run dev
 
 1. data.json 업데이트 
 
-default 대신 key 집어 넣기 -> https://mywday.site/<new_key> 로 접근가능 
+default 대신 key 집어 넣기 -> https://luvisall.site/<new_key> 로 접근가능 
 ```
 {
   "default" : {

@@ -1,60 +1,70 @@
 {
-  "default": {
+  "uksol0329": {
     "type": "simple",
-    "mainColor": "#f78828",
-    "subColor": "rgba(255,199,125,0.88)",
-    "bgColor" : "#fff",
-    "fontColor" : "#000",
+    "mainColor": "#ebc0d1",
+    "subColor": "#ebc0d1ee",
+    "bgColor" : "#000",
+    "fontColor" : "#fff",
+    "font" : "AritaDotumKR",
     "splashColor": "#000",
+    "date" : "20260329",
+    "videoSrc" : "_-mwtCr7IPI",
     "main": {
-      "title": "OO과 XX, 결혼합니다",
-      "message": "서로의 가장 좋은 친구이자\n오래된 연인이었던 우리가,\n이제는 하나의 가족이 되려 합니다.\n\n함께 걸어온 시간,\n그 길 위에서 배운 사랑과 믿음을 바탕으로\n저희 두 사람이 인생의 또 다른 시작을 하려 합니다.\n\n귀한 걸음으로 축복해주시면 감사하겠습니다.\n",
-      "videoSrc": "",
-      "date": "2030년 1월 1일",
+      "title": "현욱과 은솔, 결혼합니다",
+      "message": "23년의 봄, 서로의 세계가 닿은 날\n그날의 설렘을 간직한 채\n26년의 봄, 부부로 새로운 길을 걷고자 합니다.\n따뜻한 축복으로 자리를 빛내주시면\n더 큰 행복이 되겠습니다.\n",
+      "date": "2026년 3월 29일 일요일 오후 12시 50분",
+      "gallery": {
+        "message1": "항상 내편이 되어주는 현욱아\n사랑을 알게해줘서 고마워\n우리 사랑하면서 행복하게 살자!",
+        "message2": "은솔이로 인한 나의 큰 사랑은\n실처럼 가늘 때에도\n절대로 엉키지 않은 것처럼\n영원히 변치않고 함께 하자"
+      },
       "host": {
         "groom": {
-          "name": "OO",
+          "name": "현욱",
           "relation": "장남",
           "parents": [
             {
               "relation": "아버지",
-              "name": "김OO"
+              "name": "김진모"
             },
             {
               "relation": "어머니",
-              "name": "김OO"
+              "name": "조해진"
             }
           ]
         },
         "bride": {
-          "name": "XX",
-          "relation": "장녀",
+          "name": "은솔",
+          "relation": "차녀",
           "parents": [
             {
               "relation": "아버지",
-              "name": "이XX"
+              "name": "이상희"
             },
             {
               "relation": "어머니",
-              "name": "이XX"
+              "name": "고미경"
             }
           ]
         }
       },
-      "eventDetail": "2030년 1월 1일 1시\n신라호텔 영빈관"
+      "eventDetail": "대구 수성호텔 3층 피오니홀"
     },
     "mapInfo": {
-      "address1": "신라호텔 영빈관",
-      "address2": "서울 중구 동호로 249",
-      "naverMap": "https://map.naver.com/p/search/신라호텔+영빈관/place/18698760?c=15.00,0,0,0,dh&placePath=/home?entry=bmp&from=map&fromPanelNum=2&timestamp=202507211941&locale=ko&svcName=map_pcv5&searchText=신라호텔+영빈관",
+      "address1": "대구 수성호텔 3층 피오니홀",
+      "address2": "대구 수성구 용학로 106-7",
+      "naverMap": "https://map.naver.com/p/entry/place/1916712970?c=12.00,0,0,0,dh&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202601131425&locale=ko&svcName=map_pcv5&businessCategory=hotel",
       "location": [
         {
           "title": "지하철",
-          "desc": "동대입구역 5번 출구에서 도보 5분 (신라호텔 셔틀버스 이용)"
+          "desc": "3호선 수성못역 하차 도보 10분"
+        },
+        {
+          "title": "버스",
+          "desc": "401, 410-1 수성호텔 앞 정류장 하차"
         },
         {
           "title": "주차장",
-          "desc": "자체주차장 (총 1000대 수용가능)"
+          "desc": "자체 주차장. 차량번호 등록 시 3시간 무료 주차"
         }
       ]
     },
@@ -63,26 +73,25 @@
         "host": "신랑측",
         "accountInfo": [
           {
-            "name": "김OO",
+            "name": "김진모",
             "relation": "신랑 아버지",
             "bank": "농협",
-            "account": "000-000-000000"
+            "account": "312-0024-8839-11",
+            "phone": "010-3528-8962"
           },
           {
-            "name": "김OO",
+            "name": "조해진",
             "relation": "신랑 어머니",
             "bank": "농협",
-            "account": "000-000-000000",
-            "kakaopayAccount": "",
-            "tossAccount": ""
+            "account": "312-0173-6472-01",
+            "phone": "010-9117-9350"
           },
           {
-            "name": "김OO",
+            "name": "김현욱",
             "relation": "신랑",
             "bank": "농협",
-            "account": "000-000-000000",
-            "kakaopayAccount": "",
-            "tossAccount": ""
+            "account": "312-0142-8543-11",
+            "phone": "010-8622-9350"
           }
         ]
       },
@@ -90,28 +99,292 @@
         "host": "신부측",
         "accountInfo": [
           {
-            "name": "이XX",
+            "name": "이상희",
             "relation": "신부 아버지",
-            "bank": "국민",
-            "account": "000-000-000000",
-            "kakaopayAccount": "",
-            "tossAccount": ""
+            "bank": "농협",
+            "account": "176170-56-030016",
+            "phone": "010-3806-2932"
           },
           {
-            "name": "이XX",
+            "name": "고미경",
             "relation": "신부 어머니",
-            "bank": "국민",
-            "account": "000-000-000000",
-            "kakaopayAccount": "",
-            "tossAccount": ""
+            "bank": "신한",
+            "account": "110-209-236017",
+            "phone": "010-3099-5189"
           },
           {
-            "name": "이XX",
+            "name": "이은솔",
             "relation": "신부",
-            "bank": "국민",
-            "account": "000-000-000000",
-            "kakaopayAccount": "",
-            "tossAccount": ""
+            "bank": "IM뱅크",
+            "account": "508-12-8605998",
+            "phone": "010-8699-8232"
+          }
+        ]
+      }
+    ]
+  },
+  "hy0613": {
+    "type": "simple",
+    "mainColor": "#8cabc0",
+    "subColor": "#8cabc0ee",
+    "bgColor" : "#000",
+    "fontColor" : "#fff",
+    "font" : "AritaDotumKR",
+    "splashColor": "#fff",
+    "date" : "20260613",
+    "videoSrc" : "_-mwtCr7IPI",
+    "main": {
+      "title": "현욱과 영비, 결혼합니다",
+      "message": "초록이 가장 짙어가는 날, 서로의 내일을 약속하고자 합니다.\n따뜻한 축복으로 자리를 빛내주시면\n더 큰 행복이 되겠습니다.\n",
+      "date": "2026년 6월 13일 토요일 오후 3시",
+      "gallery": {
+        "message1": "항상 내편이 되어주는 영비야\n우리 지금처럼 서로 아껴주고\n 사랑하면서 행복하게 살자!",
+        "font1": "SSVeryBadHandwritingRegular",
+        "y1": 9,
+        "size1": 21,
+        "x1": 5,
+        "rotate1": 346,
+        "color1": "#ffffff",
+        "message2": "앞으로 함께하는 나날이 기대돼.\n힘들고 슬플 때 힘이 되어주고 \n기쁠때 내 일 처럼 기뻐할거야!",
+        "font2": "SSMullaeler",
+        "y2": 17,
+        "size2": 20,
+        "x2": 3,
+        "rotate2": 5,
+        "color2": "#ffffff"
+      },
+      "host": {
+        "groom": {
+          "name": "현욱",
+          "relation": "아들",
+          "parents": [
+            {
+              "relation": "아버지",
+              "name": "권두하"
+            },
+            {
+              "relation": "어머니",
+              "name": "신아림"
+            }
+          ]
+        },
+        "bride": {
+          "name": "영비",
+          "relation": "딸",
+          "parents": [
+            {
+              "relation": "아버지",
+              "name": "조달현"
+            },
+            {
+              "relation": "어머니",
+              "name": "민순자"
+            }
+          ]
+        }
+      },
+      "eventDetail": "상록아트홀 그랜드볼룸홀"
+    },
+    "mapInfo": {
+      "address1": "상록아트홀 그랜드볼룸홀",
+      "address2": "서울 강남구 언주로 508 상록회관 L층",
+      "naverMap": "https://map.naver.com/p/entry/place/366784007?c=15.82,0,0,0,dh&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202602271539&locale=ko&svcName=map_pcv5",
+      "location": [
+        {
+          "title": "셔틀버스",
+          "desc": "셔틀버스 운행(수시) : 선릉역 5번 출구"
+        },
+        {
+          "title": "지하철",
+          "desc": "2호선 선릉역 하차 도보 10분"
+        },
+        {
+          "title": "버스",
+          "desc": "141, 242, 361 KT강남지사 정류장 하차"
+        },
+        {
+          "title": "주차장",
+          "desc": "자체 주차장"
+        }
+      ]
+    },
+    "hostInfo": [
+      {
+        "host": "신랑측",
+        "accountInfo": [
+          {
+            "name": "권두하",
+            "relation": "신랑 아버지",
+            "bank": "농협은행",
+            "account": "731-12-033615",
+            "phone": "010-2264-9875"
+          },
+          {
+            "name": "신아림",
+            "relation": "신랑 어머니",
+            "bank": "대구은행",
+            "account": "075-08-056738-1",
+            "phone": "010-7744-2395"
+          },
+          {
+            "name": "권현욱",
+            "relation": "신랑",
+            "bank": "토스뱅크",
+            "account": "1000-3493-4999",
+            "phone": "010-2485-1660"
+          }
+        ]
+      },
+      {
+        "host": "신부측",
+        "accountInfo": [
+          {
+            "name": "조달현",
+            "relation": "신부 아버지",
+            "bank": "신한은행",
+            "account": "110-030-731012",
+            "phone": "010-8716-4509"
+          },
+          {
+            "name": "민순자",
+            "relation": "신부 어머니",
+            "bank": "하나은행",
+            "account": "752-910159-51007",
+            "phone": "010-7316-4501"
+          },
+          {
+            "name": "조영비",
+            "relation": "신부",
+            "bank": "토스뱅크",
+            "account": "1002-4183-0133",
+            "phone": "010-2059-6511"
+          }
+        ]
+      }
+    ]
+  },
+  "dh0613": {
+    "type": "simple",
+    "mainColor": "#ebc0d1",
+    "subColor": "#ebc0d1ee",
+    "bgColor": "#000",
+    "fontColor": "#fff",
+    "font": "AritaDotumKR",
+    "splashColor": "#000",
+    "date": "20260613",
+    "videoSrc": "_-mwtCr7IPI",
+    "main": {
+      "title": "다슬과 혜린, 결혼합니다",
+      "message": "서로의 내일을 약속하고자 합니다.\n따뜻한 축복으로 자리를 빛내주시면\n더 큰 행복이 되겠습니다.\n",
+      "date": "2026년 6월 13일 토요일 오후 5시 40분",
+      "gallery": {
+        "message1": "언제나 든든하게 \n내 옆을 지켜줘서 고마워! \n앞으로도 서로를 \n가장 아껴주는 사람이 되자!",
+        "y1": 18,
+        "rotate1": 356,
+        "message2": "내게 함께하는 기쁨을 알려준 혜린아,\n 늘 고맙고 앞으로도 우리의 시간이 \n따뜻하고 행복한 \n추억들로 가득하길 바라",
+        "y2": 4
+      },
+      "host": {
+        "groom": {
+          "name": "다슬",
+          "relation": "아들",
+          "parents": [
+            {
+              "relation": "아버지",
+              "name": "박중근"
+            },
+            {
+              "relation": "어머니",
+              "name": "안옥기"
+            }
+          ]
+        },
+        "bride": {
+          "name": "혜린",
+          "relation": "딸",
+          "parents": [
+            {
+              "relation": "아버지",
+              "name": "전승훈"
+            },
+            {
+              "relation": "어머니",
+              "name": "신현주"
+            }
+          ]
+        }
+      },
+      "eventDetail": "더링크호텔 4층 플라자홀"
+    },
+    "mapInfo": {
+      "address1": "더링크호텔 4층 플라자홀",
+      "address2": "서울 구로구 경인로 610",
+      "naverMap": "https://map.naver.com/p/entry/place/1070501110?placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604071609&locale=ko&svcName=map_pcv5&c=15.00,0,0,0,dh",
+      "location": [
+        {
+          "title": "지하철",
+          "desc": "1호선 구로역 3번 출구 (도보 5분) / 1·2호선 신도림역 1번 출구 (셔틀버스 운행)"
+        },
+        {
+          "title": "버스",
+          "desc": "신도림동·구로역 정류장 하차 (중앙차로 : 10, 83, 88, 510, 530, 642, 650, 664, 5615, 5714, 6512, 6515, 6637 등)"
+        },
+        {
+          "title": "주차장",
+          "desc": "호텔 내 주차장 및 외부 주차장 이용 (하객 1시간 30분 무료 주차)"
+        }
+      ]
+    },
+    "hostInfo": [
+      {
+        "host": "신랑측",
+        "accountInfo": [
+          {
+            "name": "박중근",
+            "relation": "신랑 아버지",
+            "bank": "국민은행",
+            "account": "004-21-0844-949",
+            "phone": ""
+          },
+          {
+            "name": "안옥기",
+            "relation": "신랑 어머니",
+            "bank": "우리은행",
+            "account": "1002-129-436916",
+            "phone": ""
+          },
+          {
+            "name": "박다슬",
+            "relation": "신랑",
+            "bank": "기업은행",
+            "account": "296-095944-02-017",
+            "phone": ""
+          }
+        ]
+      },
+      {
+        "host": "신부측",
+        "accountInfo": [
+          {
+            "name": "전승훈",
+            "relation": "신부 아버지",
+            "bank": "신한은행",
+            "account": "110-458-990757",
+            "phone": ""
+          },
+          {
+            "name": "신현주",
+            "relation": "신부 어머니",
+            "bank": "국민은행",
+            "account": "617401-04-195152",
+            "phone": ""
+          },
+          {
+            "name": "전혜린",
+            "relation": "신부",
+            "bank": "카카오뱅크",
+            "account": "3333-02-6813262",
+            "phone": ""
           }
         ]
       }

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ExpandMore from "@/assets/icons/expand_more.svg?react";
 import rawData from "data.json"
 import { IData } from "@/types/data";
+import { useUserData } from "@/context/UserDataContext";
 
 interface IAccordionProps {
   id:string;
@@ -13,6 +14,7 @@ const Accordion = ({ id, title, children }: IAccordionProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const db: Record<string, IData> = rawData;
   const subColor = db[id]?.subColor || "rgba(255,199,125,0.88)";
+  const { fontColor, bgColor } = useUserData();
 
 
   const toggleAccordion = () => {
@@ -22,14 +24,14 @@ const Accordion = ({ id, title, children }: IAccordionProps) => {
   return (
     <AccordionWrapper color={subColor}>
       <AccordionHeader color={subColor} isactive={isOpen} onClick={toggleAccordion}>
-        <p>{title}</p>
+        <p style={{ color: fontColor }}>{title}</p>
 
         <span>
-          <ExpandMore fill="#656565" />
+          <ExpandMore fill={fontColor} />
         </span>
       </AccordionHeader>
 
-      {isOpen && <AccordionContent>{children}</AccordionContent>}
+      {isOpen && <AccordionContent style={{ backgroundColor: bgColor, color: fontColor }}>{children}</AccordionContent>}
     </AccordionWrapper>
   );
 };
@@ -54,7 +56,6 @@ const AccordionHeader = styled.div.withConfig({
   cursor: pointer;
   height: 40px;
   & > p {
-    color: #000;
   }
   & > span {
     display: flex;
@@ -70,6 +71,4 @@ const AccordionContent = styled.div`
   font-size: 14px;
   text-align: justify;
   padding: 10px 20px;
-  background-color: #ffffff;
-  color
 `;

@@ -2,12 +2,14 @@ import styled from "@emotion/styled";
 import Copy from "@/assets/icons/copy.svg?react";
 import kakaopay from "@/assets/icons/kakaopay.png?url";
 import toss from "@/assets/icons/toss.png?url";
+import { useUserData } from "@/context/UserDataContext";
 
 interface IAccountProps {
   name: string;
   relation: string;
   bank: string;
   account: string;
+  phone?: string;
   kakaopayAccount?: string;
   tossAccount?: string;
 }
@@ -16,9 +18,26 @@ const AccountWrap = ({
   relation,
   bank,
   account,
+  phone,
   kakaopayAccount,
   tossAccount,
 }: IAccountProps) => {
+  const { fontColor, bgColor } = useUserData();
+  const handleKakaoContact = () => {
+    if (!window.Kakao) {
+      alert("카카오 SDK가 로드되지 않았어요.");
+      return;
+    }
+
+    window.Kakao.Share.sendDefault({
+      objectType: "text",
+      text: `${relation} ${name}\n전화번호: ${phone}`,
+      link: {
+        mobileWebUrl: window.location.href,
+        webUrl: window.location.href,
+      },
+    });
+  };
 
   const handleCopy = () => {
     navigator.clipboard.writeText(account).then(
@@ -34,16 +53,21 @@ const AccountWrap = ({
   return (
     <Wrapper>
       <Info>
-        <Relation>{relation}</Relation>
-        <Name>{name}</Name>
+        <Relation style={{ color: fontColor, opacity: 0.8 }}>{relation}</Relation>
+        <Name style={{ color: fontColor }}>{name}</Name>
       </Info>
       <Details>
-        <AccountInfo>
+        <AccountInfo style={{ color: fontColor }}>
           {bank} {account}
         </AccountInfo>
-        <CopyButton onClick={handleCopy}>
-          <Copy fill="#dfdfdf" />
+        <CopyButton style={{ backgroundColor: bgColor }} onClick={handleCopy}>
+          <Copy fill={fontColor} />
         </CopyButton>
+        {phone && (
+          <KakaoContactButton onClick={handleKakaoContact}>
+            카카오톡 연락
+          </KakaoContactButton>
+        )}
       </Details>
       <AccountLinks>
         {kakaopayAccount && (
@@ -84,11 +108,9 @@ const Info = styled.div`
   margin: 5px 0;
 `;
 const Relation = styled.span`
-  color: #44484d;
 `;
 const Name = styled.span`
   font-size: 1rem;
-  color: #000;
 `;
 
 const Details = styled.div`
@@ -98,7 +120,6 @@ const Details = styled.div`
 `;
 
 const AccountInfo = styled.div`
-  color: #000;
 `;
 const CopyButton = styled.button`
   border: none;
@@ -142,6 +163,16 @@ const KakaopayImg = styled.img`
 
 const TossImg = styled.img`
   width: 70px;
+`;
+
+const KakaoContactButton = styled.button`
+  border: 1px solid #dfdfdf;
+  background: #fee500;
+  color: #3c1e1e;
+  font-size: 0.7rem;
+  border-radius: 5px;
+  padding: 0.2em 0.4em;
+  cursor: pointer;
 `;
 
 export default AccountWrap;

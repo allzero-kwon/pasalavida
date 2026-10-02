@@ -5,8 +5,11 @@ const Wrapper = styled.section`
   display: flex;
   align-items: center;
   flex-direction: column;
-  overflow: auto;
-  margin-top: 60px;
+  overflow: visible;
+  margin-top: 40px;
 `;
+
+
+
 
 export default Wrapper;

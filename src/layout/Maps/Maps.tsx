@@ -36,11 +36,12 @@ const Maps = ({address}: MapProps) => {
         style={{
         width: "100%",
         height: "300px",
+        margin: "20px 0px 10px",
         }}
       >
       <NaverMap
         center={new navermaps.LatLng(coords.lat, coords.lng)}
-        defaultZoom={18}
+        defaultZoom={15}
         draggable={false}
         pinchZoom={false}
         scrollWheel={false}

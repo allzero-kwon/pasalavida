@@ -2218,7 +2218,7 @@ function lA(){return"undefined"!=typeof BlobBuilder?BlobBuilder:"undefined"!=typ
     height: auto;
     border-radius: 8px;
     cursor: pointer;
-`)),lM=()=>{const{mainColor:e}=Cy();return kn.jsxs(cM,{children:[kn.jsx(OC,{}),kn.jsx(py,{color:e,children:"Gallery"}),kn.jsx(tM,{})]})},cM=dy.div(z||(z=xt`
+`)),lM=()=>kn.jsxs(cM,{children:[kn.jsx(OC,{}),kn.jsx(tM,{})]}),cM=dy.div(z||(z=xt`
   width: 100%;
 `)),uM=({id:e})=>{const t=(e=>{const t=Object.assign({"/src/assets/dh0613/main/main_icon.png":mC,"/src/assets/dh0613/main/main_paragraph.jpeg":gC,"/src/assets/gs1129/main/main_icon.png":vC,"/src/assets/gs1129/main/main_paragraph.jpeg":yC,"/src/assets/hy0613/main/main_icon.png":_C,"/src/assets/hy0613/main/main_paragraph.png":bC,"/src/assets/uksol0329/main/main_icon.png":wC,"/src/assets/uksol0329/main/main_paragraph.png":xC}),n={};return Object.entries(t).filter(([t])=>t.includes(`/assets/${e}/`)).forEach(([e,t])=>{var i;const r=null===(i=e.split("/").pop())||void 0===i?void 0:i.split(".")[0];"main_paragraph"===r&&(n.paragraph=t.default),"main_icon"===r&&(n.icon=t.default)}),n})(e);return kn.jsxs(pM,{children:[t.icon&&kn.jsx(dM,{children:kn.jsx("img",{src:t.icon,alt:"icon"})}),t.paragraph&&kn.jsx(hM,{children:kn.jsx("img",{src:t.paragraph,alt:"결혼 인사말"})})]})},dM=dy.div(F||(F=xt`
   margin: 40px auto 10px;
